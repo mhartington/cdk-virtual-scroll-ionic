@@ -1,0 +1,7 @@
+{
+  "appId": "com.angular.test.app",
+  "appName": "Angular-Test",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

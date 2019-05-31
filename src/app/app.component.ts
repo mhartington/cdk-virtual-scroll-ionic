@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Plugins, SplashScreenPlugin } from '@capacitor/core';
+import { Plugins, SplashScreenPlugin, StatusBarStyle } from '@capacitor/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,10 @@ import { Plugins, SplashScreenPlugin } from '@capacitor/core';
 export class AppComponent {
   splashScreen: SplashScreenPlugin;
   constructor() {
-    const { SplashScreen } = Plugins;
+    const { SplashScreen, StatusBar } = Plugins;
     this.splashScreen = SplashScreen;
+    StatusBar.setStyle({style: StatusBarStyle.Light})
     this.splashScreen.hide();
+
   }
 }
