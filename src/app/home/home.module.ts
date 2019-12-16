@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { ScrollingModule } from '@angular/cdk/scrolling'
 import { HomePage } from './home.page';
 
 @NgModule({
@@ -11,6 +11,7 @@ import { HomePage } from './home.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ScrollingModule,
     RouterModule.forChild([
       {
         path: '',

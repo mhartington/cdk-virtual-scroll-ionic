@@ -7,8 +7,16 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <cdk-virtual-scroll-viewport class="scroll-viewport" #scroll [itemSize]="itemSize" minBufferPx="900" maxBufferPx="1350">
+    <ion-list>
+      <ion-item *cdkVirtualFor="let item of items;trackBy: trackByFn">
+        <ion-avatar slot="start">
+          <img [src]="'https://loremflickr.com/40/40'" />
+        </ion-avatar>
+        <ion-label>
+          {{item }}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </cdk-virtual-scroll-viewport>
 </ion-content>
