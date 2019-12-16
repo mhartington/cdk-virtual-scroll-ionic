@@ -9,7 +9,7 @@
 <ion-content>
   <cdk-virtual-scroll-viewport class="scroll-viewport" #scroll [itemSize]="itemSize" minBufferPx="900" maxBufferPx="1350">
     <ion-list>
-      <ion-item *cdkVirtualFor="let item of items;trackBy: trackByFn">
+      <ion-item *cdkVirtualFor="let item of items;trackBy: trackByFn" [routerLink]="['/', 'detail']">
         <ion-avatar slot="start">
           <img [src]="'https://loremflickr.com/40/40'" />
         </ion-avatar>
